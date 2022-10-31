@@ -1,33 +1,22 @@
 .header {
-   position: sticky;
+   position: fixed;
    top: 0;
    display: flex;
    background-color: white;
    border-bottom: 1px solid lightgrey;
-   padding-top: 10px;
-   padding-bottom: 10px;
    width: 100%;
-   z-index: 999;
+   }
 
-}
-
-.icons{
-    display: flex;
-}
-
-.end{
-    display: flex;
-    float: right;
-    align-items: baseline;
-    flex-direction: row;
-}
 .heading{
     display: flex;
-    align-items: center;
 }
 
-.heading-1, .heading-2{
+.heading1, .heading2{
     font-family: Georgia, serif;
     display: flex;
     justify-content: center;
+}
+
+.heading2{
+    margin-top: 1.5rem;
 }

@@ -36,11 +36,11 @@
     flex-direction: row;
 }
 
-.heading-1, .heading-2{
+.heading1, .heading2{
+    font-family: Georgia, serif;
     display: flex;
-    float: left;
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .next-button{

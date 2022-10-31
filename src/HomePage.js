@@ -7,20 +7,19 @@ function HomePage() {
     const navigate = useNavigate();
   return (
     <div className="homePage">
-     <Row>
-     <h3 className="heading-1">
-     <Alert key="light" variant="secondary">
-     What would you like to do today?
-        </Alert>
-      </h3>
-     </Row>
-     <Row>
-     <div className="heading-2">
-     <Alert key="light" variant="secondary">
-     Welcome to AirBoxr. Let's start with the task you want to accomplish today.
-        </Alert>
-      </div>
-     </Row>
+      
+            <Row>
+              <Col><h1 className="heading1">
+                 What would you like to do today?
+              </h1></Col>
+            </Row>
+            <Row>
+            <Col>
+            <h5 className="heading2">Welcome to Airboxr. Let's start with the task you want to accomplish today.
+             </h5>
+            </Col>            
+             </Row>
+        
      <div className="homePageButtons">
      <Row>
         <Col></Col>

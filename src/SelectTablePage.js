@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Alert, Badge, Button, Row, Col, InputGroup, Form} from 'react-bootstrap';
+import {Badge, Button, Row, Col, InputGroup, Form} from 'react-bootstrap';
 import {useNavigate, useLocation } from "react-router-dom";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -43,13 +43,11 @@ function SelectTablePage() {
           console.log("TODO - Go to SelectColumnsPage");
         }
         else{
-          navigate("/selectTablePage2", { state: { tables: tables, intendedTables: value2, name: name,  }})
+          navigate("/selectTablePage2", { state: {tables: tables, intendedTables: value2, name: name}})
         }
       }
 
         useEffect(()=>{
-         
-
           var newTable=[];
           const onlyTitle = (item1)=>{
                newTable.push(item1.title);
@@ -66,7 +64,6 @@ function SelectTablePage() {
                   setTableStart(table2);
                   setFilteredResults(table2);
                   console.log(tableStart);
-
                 }
             }
             else {table2.push(str.join(''));
@@ -91,30 +88,32 @@ function SelectTablePage() {
   return (
     <div>
        <div className="header">
-            <Row className="icons">
+       <Row className="icons">
                 <Col>
-                <HomeIcon onClick={()=> navigate("/homePage")} fontSize="large" />
+                <ArrowBackIcon onClick={()=> navigate("/selectSourcePage")} fontSize="large"/>
                 </Col>
-                <Col></Col>
-                <Col className="end"  >
-               <ChatIcon fontSize="large" />
+                <Col>
+                <HomeIcon onClick={()=> navigate("/homePage")} fontSize="large" /></Col>
+                <Col className="end">
+                <h6>
+                <Badge bg="dark"><ChatIcon fontSize="medium"/>CHAT</Badge>
+                </h6>
                 </Col>
-            </Row>
+        </Row>
         </div>
-         <div>
+        <div>
             <Row>
-        <h3 className="heading-1">
-        <ArrowBackIcon onClick={()=> navigate("/selectSourcePage")} fontSize="large"/><Alert key="light" variant="secondary">
-        Select Table
-        </Alert>
-      </h3>
-      </Row>
-      <Row>
-      <div className="heading-2">
-      <Alert key="light" variant="secondary"> {name} has the following tables ready for import. Please select the table you would like to import.  </Alert>
-      </div>
-      </Row>
-      </div>
+              <Col><h1 className="heading1">
+                 Select Table
+              </h1></Col>
+            </Row>
+            <Row>
+            <Col>
+            <h5 className="heading2">{name} has following tables ready for import. Please select the table you would like to import.
+             </h5>
+            </Col>            
+             </Row>
+        </div>
       <Row>
         <Col></Col>
         <Col>
@@ -136,12 +135,12 @@ function SelectTablePage() {
         ))}
       </RadioGroup>
     </FormControl>
-    <Row >
+    <Row>
       <Col></Col>
-      <Col><Button className="next-button" variant="danger" size="lg" disabled={!value} onClick={nextButton}>
+      <Col sm={3}><Button className="next-button" variant="danger" size="lg" disabled={!value} onClick={nextButton}>
         Next
     </Button>{' '}</Col>
-      <Col></Col>
+    <Col></Col>
     </Row>
     </div>
   )
