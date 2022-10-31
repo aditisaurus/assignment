@@ -1,0 +1,33 @@
+.header {
+   position: sticky;
+   top: 0;
+   display: flex;
+   background-color: white;
+   border-bottom: 1px solid lightgrey;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: 100%;
+   z-index: 999;
+
+}
+
+.icons{
+    display: flex;
+}
+
+.end{
+    display: flex;
+    float: right;
+    align-items: baseline;
+    flex-direction: row;
+}
+.heading{
+    display: flex;
+    align-items: center;
+}
+
+.heading-1, .heading-2{
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+}

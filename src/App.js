@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import { Routes, Route} from "react-router-dom";
+import HomePage from './HomePage';
+import Main from './Main';
+import SelectTablePage from './SelectTablePage';
+import SelectTablePage2 from './SelectTablePage2';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+      <Route path="homepage" element={<HomePage/>} />
+      <Route path="selectSourcePage" element={<Main/>} />
+      <Route path="selectTablePage" element={<SelectTablePage/>} />
+      <Route path="selectTablePage2" element={<SelectTablePage2/>} />
+
+
+      </Routes>
+    
+     </div>
   );
 }
 

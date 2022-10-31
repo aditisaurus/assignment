@@ -1,0 +1,39 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.source-card {
+    position: relative;
+    margin: 2rem;
+    height: 30%;
+    width: 7rem;
+}
+
+.image{
+    width: 100%;
+    object-fit: contain;
+    height: 80%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    cursor: cell;
+}
+
+.source-name{
+   margin-top: 0;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+.heart-icon{
+    cursor: pointer;
+    margin-top: 0.25rem;
+    margin-bottom: 0.2rem;
+}
