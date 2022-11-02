@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  z-index: 999;
+}
+.filter-table {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+.filter-table > input {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background: none;
+  border-bottom: 1px solid lightgrey;
+}
+
+.heading-primary,
+.heading-secondary {
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.next-button {
+  position: relative;
+  top: 2rem;
+  width: 35%;
+}

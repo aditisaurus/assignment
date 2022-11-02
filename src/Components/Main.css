@@ -1,0 +1,23 @@
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+}
+
+.heading-primary,
+.heading-secondary {
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+}
+
+.heading-secondary {
+  margin-top: 1.5rem;
+}
